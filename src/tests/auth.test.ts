@@ -28,6 +28,6 @@ describe("get ApiKey", () => {
     const missingApiKeyHeader: IncomingHttpHeaders = {
       authorization: "test-api-key",
     };
-    expect(getAPIKey(missingApiKeyHeader)).toEqual("test-api-key");
+    expect(getAPIKey(missingApiKeyHeader)).toBeNull();
   });
 });
